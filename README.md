@@ -1,3 +1,4 @@
+# Versão DiscordJS 14.18.0 ~ Em desenvolvimento
 
  <p align="center"><img height="200" src="https://user-images.githubusercontent.com/108380983/229547060-f69c3089-d3c7-4f77-843e-3aa37edc6973.png"></p>
  
