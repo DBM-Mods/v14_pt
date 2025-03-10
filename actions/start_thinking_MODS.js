@@ -9,7 +9,7 @@ module.exports = {
     downloadURL: 'https://github.com/DBM-Mods/Portugues/archive/refs/heads/main.zip',
   },
 
-  subtitle(data, presets) {
+  subtitle(data) {
 
     if(data.descriptionx == true){
       desccor = data.descriptioncolor
@@ -32,7 +32,7 @@ module.exports = {
   html(isEvent, data) {
     return `
     <div class="dbmmodsbr1 xinelaslink" data-url="https://github.com/DBM-Mods/v14_pt/archive/refs/heads/main.zip">Atualizar</div>
-    <div class="dbmmodsbr2 xinelaslink" data-url="https://github.com/DBM-Mods/v14_pt">Versão 2.0.2</div>
+    <div class="dbmmodsbr2 xinelaslink" data-url="https://github.com/DBM-Mods/v14_pt">Versão 2.0.1</div>
 
     <div style="width: 100%; padding:5px 5px;height: calc(100vh - 160px);overflow:auto">
 
