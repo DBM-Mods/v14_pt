@@ -5,8 +5,8 @@ module.exports = {
     version: '2.1.7',
     preciseCheck: true,
     author: '[xinxyla - 172782058396057602]',
-    authorUrl: 'https://github.com/DBM-Mods/Portugues',
-    downloadURL: 'https://github.com/DBM-Mods/Portugues/archive/refs/heads/main.zip',
+    authorUrl: 'https://github.com/DBM-Mods/v14_pt',
+    downloadURL: 'https://github.com/DBM-Mods/v14_pt/archive/refs/heads/main.zip',
   },
 
   subtitle(data) {
