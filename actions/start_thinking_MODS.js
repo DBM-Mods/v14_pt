@@ -223,6 +223,10 @@ module.exports = {
 
   },
 
+  
+  modInit(data) {
+    this.prepareActions(data.actionsError);
+  },
 
   mod() { },
 };
