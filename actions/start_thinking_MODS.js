@@ -11,20 +11,37 @@ module.exports = {
 
   subtitle(data, presets) {
 
+    if(data.descriptionx == true){
+      desccor = data.descriptioncolor
+      } else {
+        desccor = 'none'
+      }
+
   if(data.cx == "0"){addtxt = `Informar o usuário em ` + (data.ephemeral ? "Particular" : "Público")} else {addtxt = `Adicionar "O bot está pensando"`}
 
-    return addtxt;
+  return data.description
+    ? `<font style="color:${desccor}">${data.description}</font>`
+    : `<font style="color:${desccor}">${addtxt}</font>`  
   },
 
 
 
-  fields: ["ephemeral", "ephemeralsub", "cx", "errcmd", "iffalse", "iffalseVal", "actionsError"],
+  fields: ["descriptioncolor","description","descriptionx","ephemeral", "ephemeralsub", "cx", "errcmd", "iffalse", "iffalseVal", "actionsError"],
 
 
   html(isEvent, data) {
     return `
-    <div class="dbmmodsbr1 xinelaslink" data-url="https://github.com/DBM-Mods/Portugues/archive/refs/heads/main.zip">Atualizar</div>
-    <div class="dbmmodsbr2 xinelaslink" data-url="https://github.com/DBM-Mods/Portugues">Versão 2.0.1</div>
+    <div class="dbmmodsbr1 xinelaslink" data-url="https://github.com/DBM-Mods/v14_pt/archive/refs/heads/main.zip">Atualizar</div>
+    <div class="dbmmodsbr2 xinelaslink" data-url="https://github.com/DBM-Mods/v14_pt">Versão 2.0.2</div>
+
+    <div style="width: 100%; padding:5px 5px;height: calc(100vh - 160px);overflow:auto">
+
+    <div id="flutuador" style="padding:0px 0px 15px 0px">
+<table style="width:100%;"><tr>
+<td><span class="dbminputlabel">Descrição da Action</span><br><input type="text" class="round" id="description" placeholder="Deixe vazio para remover"></td>
+<td style="padding:0px 0px 0px 10px;width:70px"><div style="float:left;padding:0px 0px 0px 7px;margin-top:-5px"><dbm-checkbox id="descriptionx" label="Cor"></dbm-checkbox></div><br><input type="color" value="#ffffff" class="round" id="descriptioncolor"></td>
+</tr></table>
+</div>
 
 <div style="padding: 4px;">
 <span class="dbminputlabel">Tipo</span><br>
@@ -73,6 +90,8 @@ module.exports = {
 </div>
 
 </div>
+</div>
+
 </div>
 
 <style>
